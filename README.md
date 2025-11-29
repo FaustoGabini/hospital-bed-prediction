@@ -38,6 +38,6 @@ El objetivo es **anticipar aumentos abruptos en la demanda hospitalaria** para m
 
 <p align="center"> <img src="pipeline.png" width="700px"> </p>
 
-Predicción vs serie real (mejor modelo):
+## Predicción vs serie real (mejor modelo):
 
 <p align="center"> <img src="results/plots/RandomForest.png" width="600px"> </p>
