@@ -15,6 +15,37 @@ Incluye todo el _pipeline_:
 
 El objetivo es **anticipar aumentos abruptos en la demanda hospitalaria** para mejorar la planificación de recursos críticos (personal, UTI, equipamiento).
 
+## Acerca de los datos
+
+El dataset utilizado proviene de los registros individuales de admisión y alta de pacientes del Hero DMC Heart Institute (Ludhiana, India), correspondientes al período 2017–2019.
+
+### Construcción de la serie temporal
+
+A partir de los registros individuales, construimos una serie temporal agregada día por día, donde cada punto representa el número total de pacientes hospitalizados en esa fecha.
+Este proceso incluye:
+
+1. Convertir las fechas de admisión/alta en rangos de ocupación
+
+2. Expandir cada internación a todos los días que abarca
+
+3. Contabilizar el total de personas internadas por día
+
+4. Unificar la señal en una serie continua sin días faltantes
+
+Esto transforma datos orientados a eventos en un dataset apto para técnicas de forecasting.
+
+### Variables exógenas
+
+Además, se incorporaron variables externas para enriquecer la señal:
+
+-   Temperatura
+
+-   Humedad
+
+-   Índices de calidad del aire (AQI)
+
+-   Calendario (día de la semana, feriados, estacionalidad)
+
 ## Modelos evaluados
 
 -   Modelos ingenuos
